@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+:root{
+    --sec:#255876;
+    --main:#f7eee8;
+    --border:#c99512;
+    --scroll:#daa520;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing:border-box ;
     font-family: "Roboto", sans-serif;
-    color:#fff;
+
     text-decoration: none;
-    transition: all 0.5s;
 }
+
 html , body{
    
     height: 100%;
     width: 100%;
+    
 }
 body{
-    background-color: #3D155F;
+    background-color:var(--main);
 }
 
 ::-webkit-scrollbar{
@@ -23,7 +30,7 @@ body{
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #c3ff00;
+    background: var(--scroll);
     border-radius: 5px;
 }
 .main{
@@ -32,13 +39,12 @@ body{
 }
 .header{
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 0 4vmax;   
-    height: 80px;
+    height: 100px;
     width: 100%;
     position: fixed;
-    background-color:#140097;
+    background-color:var(--sec);
     
 }
 .header h1 {
@@ -46,21 +52,22 @@ body{
     padding: 0.7vmax 1vmax;
     font-size: 2vmax;
     font-weight: 700;
-  
+    padding-top: 25px;
 }
 .header h1 a{
-    color: #c3ff00;
+    color:goldenrod;
 }
 
 .nav{
     display: flex;
     justify-content: space-between;
+        padding-top: 25px;
 }
 
 .header .nav a{
     margin: 0.5vmax 0.7vmax;
     padding: 0.5vmax 0.8vmax;
-    color: #c3ff00;
+    color: var(--main);
     font-size: 1.4vmax;
    
     
@@ -69,12 +76,10 @@ body{
 }
 
 .header .nav a:hover{
-    color: #fff;
-    
-    box-shadow: 0 0 0.5vmax #fff;
-    
+ border-bottom: 2px solid #ffc022;   
+ 
 }
-#work,#services,#contact{
+#work,#services,#abour{
     padding: 2vmax;
     margin: 2vmax;
 }
@@ -93,12 +98,12 @@ body{
     line-height: 4vmax;
 }
 .content h1{
-    color:#cbf876;
+    color:var(--sec);
     font-size: 4.2vmax;
     font-weight: 700;
 }
 .content span{
-    color: #4b33e7;
+    color: var(--scroll);
     font-size: 3.5vmax;
     font-weight: 550;
 }
@@ -108,18 +113,20 @@ body{
 }
 
 .content i{
-    border:2px solid #CCF381;
+    border:2px solid var(--sec);
     border-radius: 50%;
     padding: 0.5vmax;
     margin-right: 1.5vmax;
     font-size: 1.5vmax;
     font-weight: 550;
+    text-decoration: none;
+    color: var(--border);
 }
 .content i:hover{
-    background-color: #CCF381;
-    color: #222831;
-    box-shadow: 0 0 1vmax #cbf876;
+    background-color: var(--sec);
+    color: var(--main);
     transition: 350ms;
+    text-decoration: none;
 }
 .social{
     margin: 0.5vmax 0 1.5vmax 0;
@@ -128,23 +135,22 @@ body{
     padding: 1vmax ;
     font-size: 1.4vmax;
     font-weight: 650;
-    border:2px solid #CCF381;
+    border:2px solid var(--sec);
+    color: var(--scroll);
     cursor: pointer;
     border-radius: 10px;
-    color: #fff;
+    
+    /* color: #fff; */
 }
 .content .btn:hover{
-    background-color: #CCF381;
-    color: #3D155F; 
-    box-shadow: 0 0 1vmax #cbf876;
+    background-color: var(--sec);
+    color: var(--main); 
     transition: 350ms;
-   
 }
 .homeImg{
     align-items: center;
 }
-.homeImg img{
-    border: 3pc solid #CCF381  ;
+.homeImg img{width: 30vmax;
     border-radius: 50%;
 }
 
@@ -162,8 +168,7 @@ body{
     line-height: 5vmax;
 }
 .aboutImg img{
-    border: 3pc solid #CCF381  ;
-    border-radius: 35%;
+    width: 30vmax
 
 }
 .aboutMe h2{
@@ -172,13 +177,13 @@ body{
     font-weight: 600;
 }
 .aboutMe span{
-    color: #4831D4;
+    color: var(--border);
     font-size: 4.2vmax;
     font-weight: 800;
    
 }
 .aboutMe h3{
-    color: #CCF381;
+    color: var(--sec);
     font-size: 2.5vmax;
     font-weight: 750;
     
@@ -193,14 +198,14 @@ body{
     padding: 1vmax ;
     font-size: 1.4vmax;
     font-weight: 650;
-    border:2px solid #CCF381;
+    
+    border:2px solid var(--sec);
+    color: var(--scroll);
     border-radius: 10px;
-    color: #fff;
 }
 .aboutMe a:hover{
-    background-color: #CCF381;
-    color: #3D155F;
-    box-shadow: 0 0 1vmax #CCF381;
+    background-color: var(--sec);
+    color: var(--main);
     transition: 350ms;
 }
 .read-more{
@@ -215,7 +220,7 @@ body{
 .work h2{
     font-size: 4.2vmax;
     font-weight: 800;
-    color: #CCF381;
+    color: var(--scroll);
     
 }
 .work .project{
@@ -224,7 +229,7 @@ body{
 }
 
 .work .project h3 a{
-    color:#CCF381;
+    color:var(--scroll);
     font-size: 2.5vmax;
     font-weight: 750;
     line-height: 5.5vmax;
@@ -233,13 +238,15 @@ body{
 .work .project .weather,.work .project .portfolio{
     margin:6vmax;
     padding: 4vmax;
-    border: 2px solid #4831D4;
+    border: 2px solid var(--sec);
     border-radius: 10px;
     width: 50%;
 }
 .work .project .weather:hover,.work .project .portfolio:hover{
-    border: 2px solid #CCF381;
-    box-shadow: 1px 1px 1.5vmax #CCF381;
+    
+    background-color: var(--sec);
+    color: var(--main);
+    cursor: pointer;
 }
 .work .project p{
     font-size: 1.2vmax;
@@ -265,28 +272,29 @@ body{
 .design,.development{
     margin:6vmax;
     padding: 4vmax;
-    border: 2px solid #4831D4;
+    border: 2px solid var(--sec);
     border-radius: 10px;
     width: 50%;
 }
 .design:hover,.development:hover{
-    border: 2px solid #CCF381;
-    box-shadow: 1px 1px 1.5vmax #CCF381;
+    background-color: var(--sec);
+    color: var(--main);
+    cursor: pointer;
 }
 .work h2{
     font-size: 4.2vmax;
     font-weight: 800;
-    color: #CCF381;
+    color: var(--scroll);
     
 }
 .services h2{
     font-size: 4.2vmax;
     font-weight: 800;
-    color: #CCF381;
+    color: var(--border);
     
 }
 .services .kaam h3 {
-    color:#CCF381;
+    color:var(--scroll);
     font-size: 2.5vmax;
     font-weight: 750;
     line-height: 5.5vmax;
@@ -304,48 +312,54 @@ body{
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 2vmax;
 }
 .contact h2{
     font-size: 4.2vmax;
     font-weight: 800;
-    color: #CCF381;    
+    color: var(--scroll);   
+    margin-bottom: 2vmax; 
 }
 .contact form{
     margin: 3vmax;
     width: 60%;
-    background-color: #00000046;
+    background-color: transparent;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4vmax ;
+    padding: 2vmax ;
+    border: 3px solid var(--sec);
 }
 .contact form div{
     margin: 1vmax auto;
     padding: 1vmax;
-    /* background: #CCF3811a;   */
+    /* background: var(--sec)1a;   */
     width: 100%;
 }
 .contact form div p{
     font-size: 1.5vmax;
     margin-left: 0.5vmax;
+    color: var(--sec);
 }
 .contact form div input{
-    background-color: #aaaaaa1e;
+    background-color: transparent;
+    
+    border: 2px solid var(--scroll);
     width: 100%;
     height: 3vmax;
     padding: 1vmax;
     font-size: 1.5vmax;
-    border: 0;
+    
     outline: 0;
     border-radius: 5px;
     margin-top: 1vmax;
 }
 textarea{
-    background-color: #aaaaaa1e;
+    background-color: transparent;
     width: 100%;
     height: 20vmax;
-    border: 1px solid #ffffff41;
+    border: 2px solid var(--scroll);
     outline: 0;
     border-radius: 10px;
     resize: none;
@@ -360,10 +374,10 @@ textarea{
     
     border-radius: 10px;
     outline: 0;
-    border: 2px solid #c3ff00;
+    background-color: var(--main);
     width: 130px;
-    background-color:transparent;
-    color: #fff;
+    border:2px solid var(--sec);
+    color: var(--scroll);
     
 }
 .contact .mssg{
@@ -374,10 +388,185 @@ textarea{
     justify-content: flex-end;
     background-color: transparent;
     margin-top: 0vmax;
+    
 }
 .contact .btn button:hover{
-    background-color: #CCF381;
-    color: #3D155F;
-    box-shadow: 0 0 1vmax #CCF381;
+    background-color: var(--sec);
+    color: var(--main); 
     transition: 350ms;
 }
+@media(max-width:600px){
+    .homeImg img , .aboutImg img{
+        width: 30vmax;
+        margin-top: 4vmax;
+        padding-top: 4vmax;
+    }
+    .header{
+        height: 60px;
+        padding: 0 1.5vmax;
+        margin-bottom: 3vmax;
+        justify-content: space-evenly;
+    }
+    
+    .header h1,.nav{
+        padding-top: 3vmax;
+        font-size: 2.5vmax;
+
+    }
+    .header .nav a{
+        font-size: 1.7vmax;
+        margin: 0.5vmax 0vmax;
+        padding: 0.5vmax 0.8vmax;
+    }
+    .home{
+        flex-direction: column;
+        padding-top: 14vmax;
+    }
+
+    .content{
+        padding-left: 6vmax;
+        line-height: 4.7vmax;
+        width: 100%;
+    }
+    .content h1{
+        font-size: 4.5vmax;
+    }
+    .content span{
+        font-size: 4vmax;
+        font-weight: 550;
+    }
+    .content h3{
+        font-size: 3.4vmax;
+        font-weight: 500;
+    }
+    
+    .content i{
+        font-size: 2.5vmax;
+        padding: 0.9vmax;
+    }
+    .content .btn{
+        font-size: 2.5vmax;
+        border-radius: 6px;
+        margin-top: 1.5vmax;
+        padding: 1.5vmax;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .social{
+        margin: 1vmax 0 3vmax 0;
+    }
+    .aboutImg{
+        display: none;
+    }
+    .aboutMe{
+        width: 100%;
+    }
+    .aboutMe h2{
+        font-size: 5.7vmax;
+        padding-bottom: 2vmax;
+    }
+    .aboutMe span{
+        
+        font-size: 5.7vmax;
+        font-weight: 800;
+       
+    }
+    .aboutMe h3{
+        font-size: 4vmax;
+        font-weight: 750;
+        
+    }
+    #about{
+        padding: 2vmax;
+        margin: 2vmax;
+    }
+    .aboutMe p{
+        font-size: 2vmax;
+        font-weight: 400;
+        line-height: 3vmax;
+    }
+    .aboutMe a{font-size: 2.5vmax;
+        border-radius: 6px;
+        /* margin-top: 1.5vmax; */
+        padding: 1.5vmax;
+    }
+    .read-more{
+        margin-top: 2.5vmax;
+    }
+    .work h2{
+        font-size: 4.5vmax;
+    }
+    .work .project{
+        flex-direction: column;
+        align-items: center;
+    }
+    .work .project .weather, .work .project .portfolio {
+        margin: 4vmax;
+        padding: 3vmax;
+        border-radius: 7px;
+        width: 80%;
+    }
+    .work .project h3 a {
+        font-size: 3.5vmax;
+    } 
+    
+    .work .project p {
+        padding-top: 1vmax;
+        font-size: 1.6vmax;
+        line-height: 2vmax;
+    } 
+    .kaam{
+        flex-direction: column;
+        align-items: center;
+    }
+    .services h2{
+        font-size: 5vmax;
+    }
+    .design, .development {
+        margin: 4vmax;
+        padding: 3vmax;
+        border-radius: 7px;
+        width: 80%;
+    }
+    .services .kaam h3{
+        
+        font-size: 3.5vmax;
+    }
+    .services .kaam p {
+        padding-top: 1vmax;
+        font-size: 1.6vmax;
+        line-height: 2vmax;
+    }
+    .contact h2{
+        font-size: 5vmax
+    }
+    #work,#services{
+        margin-top : 2vmax;
+        padding-top: 6vmax;
+    }
+    .contact form{
+        width: 80%;
+        border-radius: 7px;
+    }
+    .contact form div{
+        margin: 0.5vmax auto;
+        padding: 0.5vmax;
+    }
+    .contact form div p{
+        font-size: 2.2vmax;
+        margin-left: 0.7vmax;
+        font-weight: 500;
+    }
+    .contact form div input {
+        height: 4.4vmax;
+    }
+    .contact button{
+        font-size: 2.4vmax;
+    padding: 1.5vmax;
+    border-radius: 7px;
+    width: 84px;
+
+    }
+}
+
